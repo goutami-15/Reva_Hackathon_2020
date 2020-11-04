@@ -1,3 +1,5 @@
+Covid 19 has spread all over the world and to check and analyze the number of cases, death rates etc, we have to go through long spreadsheets and excel sheets,
+It will be very exhausting and consumes a lot of time so there should be easy way to analyze and visualize the figures in order to solve this pandemic.
 In this python project, we will implement a live dashboard for COVID 19 spread analysis. 
 This dashboard will provide many insightful visualizations for the study of coronavirus spread. 
 In this project, we will work on three different datasets and generate different dashboards.
