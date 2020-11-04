@@ -1,15 +1,3 @@
-During pandemic COVID-19, WHO has made wearing masks compulsory to protect against this deadly virus so we are developing Real-time Face Mask Detector with Python.
-We will build a real-time system to detect whether the person on the webcam is wearing a mask or not,This will be very useful in public places like Malls,movie theaters etc
-In this project, we will build a model to detect whether a person is wearing mask in real-time. We will do this using the concepts of computer vision using the OpenCV library and Keras
-Deep learning is a subset of machine learning in artificial intelligence (AI) that has networks capable of learning unsupervised from data that is unstructured or unlabeled.
-Category: Deep Learning, Machine Learning, Computer Vision
-
-Programming Language: Python
-
-Tools & Libraries: OpenCV
-
-Front End: NA
-
-Back End: Python
-
-Prerequisites: Python, Deep Learning, Machine Learning
+In this python project, we will implement a live dashboard for COVID 19 spread analysis. 
+This dashboard will provide many insightful visualizations for the study of coronavirus spread. 
+In this project, we will work on three different datasets and generate different dashboards.
