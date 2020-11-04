@@ -1,0 +1,15 @@
+Specifications:
+
+We need to create
+  1. One Python file (Backend)
+  2. Two HTML files  (Frontend)
+  3. One CSS file    (Frontend)
+
+We need to install Flask and Folium
+
+Flask: It is a web server gateway interface application in python. This is used for developing web apps.
+command to install Flask: pip install flask.
+
+Folium: It is a python API for visualizing data. It is a good API to include map related visualizations.
+command to install Folium: pip install folium.
+
