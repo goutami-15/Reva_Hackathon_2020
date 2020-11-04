@@ -1,0 +1,4 @@
+## Import all the libraries and modules required
+from keras.ooptimizers import RMSprop  #you have to install tenserflow first before you install keras
+from keras.preprocessing.image import ImageDataGenerator
+
