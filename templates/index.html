@@ -1,0 +1,316 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home | TRACK COVID19
+{% endblock title%}
+{% block content %}
+<!--Main Body-->
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="nav flex-column nav-pills col-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-introduction-tab" data-toggle="pill" href="#v-pills-introduction" role="tab"
+               aria-controls="v-pills-introduction" aria-selected="true">COVID19</a>
+            <a class="nav-link" id="v-pills-day_wise-tab" data-toggle="pill" href="#v-pills-day_wise" role="tab"
+               aria-controls="v-pills-day_wise" aria-selected="false">Day Wise</a>
+            <a class="nav-link" id="v-pills-topTwenty-tab" data-toggle="pill" href="#v-pills-topTwenty" role="tab"
+               aria-controls="v-pills-topTwenty" aria-selected="false">Top Twenty Countries</a>
+            <a class="nav-link" id="v-pills-topTwentyperM-tab" data-toggle="pill" href="#v-pills-topTwentyperM" role="tab"
+               aria-controls="v-pills-topTwentyperM" aria-selected="false">Per Million Cases</a>
+        </div>
+        <div class="tab-content col-10 shadow-lg bg-white rounded" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-introduction" role="tabpanel"
+                 aria-labelledby="v-pills-introduction-tab">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link" id="nav-corona-tab" data-toggle="tab" href="#nav-corona" role="tab"
+                           aria-controls="nav-corona" aria-selected="true">What is Corona Virus</a>
+                        <a class="nav-item nav-link" id="nav-Preventions-tab" data-toggle="tab" href="#nav-Preventions" role="tab"
+                           aria-controls="nav-Preventions" aria-selected="false">Preventions</a>
+                        <a class="nav-item nav-link" id="nav-stk_newCases-tab" data-toggle="tab" href="#nav-stk_newCases" role="tab"
+                           aria-controls="nav-stk_newCases" aria-selected="false">New Cases</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-corona" role="tabpanel" aria-labelledby="nav-corona-tab">
+                        <img class="img-fluid" src="{{url_for('static', filename='corona.png')}}" alt="Corona Virus"/>
+                        <p class="text-center h1">Noval Corona Virus</p>
+                        <p class="justify">
+                            Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.<br/>
+                            Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.
+                            Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more
+                            likely to develop serious illness.<br/>
+                            The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads.
+                            Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.<br/>
+                            The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes,
+                            so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).<br/>
+                            At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential
+                            treatments. WHO will continue to provide updated information as soon as clinical findings become available.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="nav-Preventions" role="tabpanel" aria-labelledby="nav-Preventions-tab">
+                        <img class="img-fluid" src="{{url_for('static', filename='precautions.jpg')}}" alt="Stay Home Stay Safe"/>
+                        <p class="text-center h1">Preventions</p>
+                        To prevent infection and to slow transmission of COVID-19, do the following:<br/>
+                        <ul>
+                            <li>Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.</li>
+                            <li>Maintain at least 1 metre distance between you and people coughing or sneezing.</li>
+                            <li>Avoid touching your face.</li>
+                            <li>Cover your mouth and nose when coughing or sneezing.</li>
+                            <li>Stay home if you feel unwell.</li>
+                            <li>Refrain from smoking and other activities that weaken the lungs.</li>
+                            <li>Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="nav-stk_newCases" role="tabpanel" aria-labelledby="nav-stk_newCases-tab">
+                        COVID-19 affects different people in different ways. Most infected people will develop mild to moderate
+                        illness and recover without hospitalization.<br/>
+
+                        Most common symptoms:<br/>
+                        <ul>
+                            <li>fever.</li>
+                            <li>dry cough.</li>
+                            <li>tiredness.</li>
+                        </ul>
+                        Less common symptoms:<br/>
+                        <ul>
+                            <li>aches and pains.</li>
+                            <li>sore throat.</li>
+                            <li>diarrhoea.</li>
+                            <li>conjunctivitis.</li>
+                            <li>headache.</li>
+                            <li>loss of taste or smell.</li>
+                            <li>a rash on skin, or discolouration of fingers or toes.</li>
+                        </ul>
+                        Serious symptoms:<br/>
+                        <ul>
+                            <li>difficulty breathing or shortness of breath.</li>
+                            <li>chest pain or pressure.</li>
+                            <li>loss of speech or movement.</li>
+                            <li>Seek immediate medical attention if you have serious symptoms.  Always call before visiting your doctor or health facility. </li>
+                        </ul>
+                        <b>People with mild symptoms who are otherwise healthy should manage their symptoms at home.</b><br/>
+
+                        <b>Note:</b><i>On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.</i>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-day_wise" role="tabpanel" aria-labelledby="v-pills-day_wise-tab">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link" id="nav-day_wise_bar-tab" data-toggle="tab" href="#nav-day_wise_bar" role="tab"
+                           aria-controls="nav-day_wise_bar" aria-selected="true">Bar Plot</a>
+                        <a class="nav-item nav-link" id="nav-day_wise_line-tab" data-toggle="tab" href="#nav-day_wise_line" role="tab"
+                           aria-controls="nav-Second" aria-selected="false">Line Plot</a>
+                        <a class="nav-item nav-link" id="nav-caseMap-tab" data-toggle="tab" href="#nav-caseMap" role="tab"
+                           aria-controls="nav-caseMap" aria-selected="false">Cases Over Time [Map]</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-day_wise_bar" role="tabpanel" aria-labelledby="nav-day_wise_bar-tab">
+                            <div class="chart" id="day_wise_bar">
+                                <script>
+                                    var graphs={{plot|safe}}
+                                    var layout = {width: 900, height: 500, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                    Plotly.plot('day_wise_bar',graphs,layout);
+                                </script>
+                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-day_wise_line" role="tabpanel" aria-labelledby="nav-day_wise_line-tab">
+                        <div class="chart" id="day_wise_line">
+                                <script>
+                                    var graphs={{line|safe}}
+                                    var layout = {width: 900, height: 500, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                    Plotly.plot('day_wise_line',graphs,layout);
+                                </script>
+                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-caseMap" role="tabpanel" aria-labelledby="nav-caseMap-tab">
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-topTwenty" role="tabpanel"
+                 aria-labelledby="v-pills-topTwenty-tab">
+                <div class="tab-pane fade show active" id="v-pills-world" role="tabpanel"
+                 aria-labelledby="v-pills-world-tab">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link" id="nav-topTwentyCases-tab" data-toggle="tab" href="#nav-topTwentyCases" role="tab"
+                           aria-controls="nav-topTwentyCases" aria-selected="true">Confirmed Cases</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyDeaths-tab" data-toggle="tab" href="#nav-topTwentyDeaths" role="tab"
+                           aria-controls="nav-topTwentyDeaths" aria-selected="false">Deaths</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyRecovered-tab" data-toggle="tab" href="#nav-topTwentyRecovered" role="tab"
+                           aria-controls="nav-topTwentyRecovered" aria-selected="false">Recovered</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyActive-tab" data-toggle="tab" href="#nav-topTwentyActive" role="tab"
+                           aria-controls="nav-topTwentyActive" aria-selected="false">Active</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyNewCases-tab" data-toggle="tab" href="#nav-topTwentyNewCases" role="tab"
+                           aria-controls="nav-topTwentyNewCases" aria-selected="false">New Cases</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyNewDeaths-tab" data-toggle="tab" href="#nav-topTwentyNewDeaths" role="tab"
+                           aria-controls="nav-topTwentyNewDeaths" aria-selected="false">New Deaths</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyDeaths_100_cases-tab" data-toggle="tab" href="#nav-topTwentyDeaths_100_cases" role="tab"
+                           aria-controls="nav-topTwentyDeaths_100_cases" aria-selected="false">Deaths / 100 Cases</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyNewRecovered-tab" data-toggle="tab" href="#nav-topTwentyNewRecovered" role="tab"
+                           aria-controls="nav-topTwentyNewRecovered" aria-selected="false">New Recovered</a>
+                        <a class="nav-item nav-link" id="nav-topTwentyRecovered_100_cases-tab" data-toggle="tab" href="#nav-topTwentyRecovered_100_cases" role="tab"
+                           aria-controls="nav-topTwentyRecovered_100_cases" aria-selected="false">New Recovered / 100 Cases</a>
+                        <a class="nav-item nav-link" id="nav-topTwenty1_week_change-tab" data-toggle="tab" href="#nav-topTwenty1_week_change" role="tab"
+                           aria-controls="nav-topTwenty1_week_change" aria-selected="false">Changes in 1 week</a>
+                        <a class="nav-item nav-link" id="nav-topTwenty1_week_increase-tab" data-toggle="tab" href="#nav-topTwenty1_week_increase" role="tab"
+                           aria-controls="nav-topTwenty1_week_increase" aria-selected="false">Increase in 1 week</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-topTwentyCases" role="tabpanel" aria-labelledby="nav-topTwentyCases-tab">
+                        <div class="chart" id="topTwentyCases">
+                            <script>
+                                var graphs = {{ topTwentyCases|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyCases', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyDeaths" role="tabpanel" aria-labelledby="nav-topTwentyDeaths-tab">
+                        <div class="chart" id="topTwentyDeaths">
+                            <script>
+                                var graphs = {{ topTwentyDeaths|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyDeaths', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyRecovered" role="tabpanel" aria-labelledby="nav-topTwentyRecovered-tab">
+                        <div class="chart" id="topTwentyRecovered">
+                            <script>
+                                var graphs = {{ topTwentyRecovered|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyRecovered', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyActive" role="tabpanel" aria-labelledby="nav-topTwentyActive-tab">
+                        <div class="chart" id="topTwentyActive">
+                            <script>
+                                var graphs = {{ topTwentyActive|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyActive', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyNewCases" role="tabpanel" aria-labelledby="nav-topTwentyNewCases-tab">
+                        <div class="chart" id="topTwentyNewCases">
+                            <script>
+                                var graphs = {{ topTwentyNewCases|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyNewCases', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyNewDeaths" role="tabpanel" aria-labelledby="nav-topTwentyNewDeaths-tab">
+                        <div class="chart" id="topTwentyNewDeaths">
+                            <script>
+                                var graphs = {{ topTwentyNewDeaths|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyNewDeaths', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyDeaths_100_cases" role="tabpanel" aria-labelledby="nav-topTwentyDeaths_100_cases-tab">
+                        <div class="chart" id="topTwentyDeaths_100_cases">
+                            <script>
+                                var graphs = {{ topTwentyDeaths_100_cases|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyDeaths_100_cases', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyNewRecovered" role="tabpanel" aria-labelledby="nav-topTwentyNewRecovered-tab">
+                        <div class="chart" id="topTwentyNewRecovered">
+                            <script>
+                                var graphs = {{ topTwentyNewRecovered|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyNewRecovered', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwentyRecovered_100_cases" role="tabpanel" aria-labelledby="nav-topTwentyRecovered_100_cases-tab">
+                        <div class="chart" id="topTwentyRecovered_100_cases">
+                            <script>
+                                var graphs = {{ topTwentyRecovered_100_cases|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwentyRecovered_100_cases', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwenty1_week_change" role="tabpanel" aria-labelledby="nav-topTwenty1_week_change-tab">
+                        <div class="chart" id="topTwenty1_week_change">
+                            <script>
+                                var graphs = {{ topTwenty1_week_change|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwenty1_week_change', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-topTwenty1_week_increase" role="tabpanel" aria-labelledby="nav-topTwenty1_week_increase-tab">
+                        <div class="chart" id="topTwenty1_week_increase">
+                            <script>
+                                var graphs = {{ topTwenty1_week_increase|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('topTwenty1_week_increase', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-topTwentyperM" role="tabpanel"
+                 aria-labelledby="v-pills-topTwentyperM-tab">
+                <div class="tab-pane fade show active" id="v-pills-world" role="tabpanel"
+                 aria-labelledby="v-pills-world-tab">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link" id="nav-perMDeaths-tab" data-toggle="tab" href="#nav-perMDeaths" role="tab"
+                           aria-controls="nav-perMDeaths" aria-selected="true">Per Million Deaths</a>
+                        <a class="nav-item nav-link" id="nav-totalTests-tab" data-toggle="tab" href="#nav-totalTests" role="tab"
+                           aria-controls="nav-totalTests" aria-selected="false">Total Tests</a>
+                        <a class="nav-item nav-link" id="nav-perMTests-tab" data-toggle="tab" href="#nav-perMTests" role="tab"
+                           aria-controls="nav-perMTests" aria-selected="false">Per Million Tests</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-perMDeaths" role="tabpanel" aria-labelledby="nav-perMDeaths-tab">
+                        <div class="chart" id="perMDeaths">
+                            <script>
+                                var graphs = {{ perMDeaths|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('perMDeaths', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-totalTests" role="tabpanel" aria-labelledby="nav-totalTests-tab">
+                        <div class="chart" id="totalTests">
+                            <script>
+                                var graphs = {{ totalTests|safe }}
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('totalTests', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-perMTests" role="tabpanel" aria-labelledby="nav-perMTests-tab">
+                        <div class="chart" id="perMTests">
+                            <script>
+                                var graphs = {{ perMTests|safe }};
+                                var layout = {width: 900, height: 400, margin: {t: 50, b: 50, l:100, r:20}, coloraxis: {showscale: false, colorscale: "Viridis"}};
+                                Plotly.plot('perMTests', graphs, layout);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!--/.Main Body-->
+{% endblock %}
